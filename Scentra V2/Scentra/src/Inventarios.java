@@ -40,7 +40,7 @@ public class Inventarios extends JFrame implements ActionListener {
     JButton btnAñadir;
     JButton btnEliminar;
     JButton btnActualizar;
-    private JTextField txtID;
+    public JTextField txtID;
     //Permite mostrar solo un panel a la vez tipo "tarjetas"
     private CardLayout cardLayout;
     //Panel principal donde se agregar los paneles que serán manejados con CardLayout
@@ -468,15 +468,23 @@ public class Inventarios extends JFrame implements ActionListener {
         if (e.getSource() == btnProductos) {
             cardLayout.show(panelContenedor, "Productos");//Manda a llamar dentro del PanelContenedor al panel asignado como "Productos"
             lbltitulo.setText("Productos Terminados");
+             this.txtID.setVisible(true);
+             txtID.setText("ID");
         } else if (e.getSource() == btnMateria) {
             cardLayout.show(panelContenedor, "Materia");
             lbltitulo.setText("Materia Prima");
+             this.txtID.setVisible(true);
+              txtID.setText("ID");
         } else if (e.getSource() == btnMaterial) {
             cardLayout.show(panelContenedor, "Material");
             lbltitulo.setText("Material de Empaque");
+            this.txtID.setVisible(true);
+             txtID.setText("ID");
         } else if (e.getSource() == btnInventario) {
             cardLayout.show(panelContenedor, "Inventarios");
             lbltitulo.setText("Inventario");
+            this.txtID.setVisible(false);
+             txtID.setText("");
         }
 
         if (e.getSource() == btnDashboard) {
@@ -485,7 +493,7 @@ public class Inventarios extends JFrame implements ActionListener {
             if (menuExpandido) {
                 toggleMenu(); // Contraer al hacer clic
             }
-        } else if (e.getSource() == btnInventario) {
+        } else if (e.getSource() == btnInventarios) {
             new Inventarios();
             this.dispose();
             if (menuExpandido) {

@@ -9,16 +9,11 @@ public class pnlInventario extends JPanel implements ActionListener {
 
     JSeparator linea;
     JButton btnDatos;
-    private JTextField txtNombre;
-    private JTextField txtCantidad;
-    private JTextField txtCosto;
-    private JTextField txtCantidadMin;
-    private JTextField txtUnidad;
+   
     private JTable tablaInventario;
     private DefaultTableModel mdTabla;
     private JScrollPane scTabla;
     private JTableHeader titulos;
-    private JPanel pnlTextos;
 //Sub
     Font bt = new Font("Segoe IU", Font.PLAIN, 14);
 //titulos
@@ -34,16 +29,11 @@ public class pnlInventario extends JPanel implements ActionListener {
 
     public void posicionar() {
 //        pnlTextos.setBounds(40, 150, 350, 225);
-        pnlTextos.setBounds(300, 40, 350, 225);
-        txtNombre.setBounds(20, 20, 310, 30);
-        txtCantidad.setBounds(20, 70, 145, 30);
-        txtCosto.setBounds(20, 120, 145, 30);
-        txtCantidadMin.setBounds(185, 70, 145, 30);
-        txtUnidad.setBounds(185, 120, 145, 30);
+
         linea.setBounds(20, 170, 310, 6);
         btnDatos.setBounds(130, 180, 80, 30);
 //        scTabla.setBounds(410, 250, 600, 200);
-        scTabla.setBounds(35, 305, 880, 200);
+        scTabla.setBounds(35, 35, 880, 485);
 
     }
 
@@ -56,14 +46,6 @@ public class pnlInventario extends JPanel implements ActionListener {
     }
 
     public void agr() {
-        add(pnlTextos);
-        pnlTextos.add(txtNombre);
-        pnlTextos.add(txtCantidad);
-        pnlTextos.add(txtCosto);
-        pnlTextos.add(txtCantidadMin);
-        pnlTextos.add(txtUnidad);
-        pnlTextos.add(btnDatos);
-        pnlTextos.add(linea);
         add(scTabla);
 
         btnDatos.addActionListener(this);
@@ -117,23 +99,11 @@ public class pnlInventario extends JPanel implements ActionListener {
     }
 
     public void pnl() {
-        pnlTextos = new JPanel();
-        pnlTextos.setLayout(null);
-        pnlTextos.setBackground(new Color(180, 168, 170));
+       
     }
 
     public void txf() {
 
-        txtNombre = new JTextField(" Nombre objeto");
-        txtCantidad = new JTextField(" Cantidad dis.");
-        txtCosto = new JTextField(" Costo/Precio");
-        txtCantidadMin = new JTextField(" Cantidad min.");
-        txtUnidad = new JTextField(" Unidad de medida");
-        diseñotxf(txtNombre);
-        diseñotxf(txtCantidad);
-        diseñotxf(txtCosto);
-        diseñotxf(txtCantidadMin);
-        diseñotxf(txtUnidad);
     }
 
     public void diseñotxf(JTextField txf) {

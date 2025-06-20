@@ -7,11 +7,11 @@ public class Conexion {
     Connection con;
     public Connection getConnection() {
         // driver, puerto y el nombre de la base de datos
-        String url = "jdbc:mysql://localhost:3306/bd_ejemplo";
+        String url = "jdbc:mysql://localhost:3306/Expo3";
         //usuario
         String user = "root";
         //contraseña
-        String pass = "12345678";
+        String pass = "12345";
         //try catch para manejo de excepciones
         try {
             Class.forName("com.mysql.jdbc.Driver");
